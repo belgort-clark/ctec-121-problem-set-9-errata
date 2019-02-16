@@ -1,4 +1,4 @@
-# ctec-121-problem-set-9-errata
+# Module 6 - Problem Set No. 9 Errata
 
 ## Fixes to Problem No. 1
 
