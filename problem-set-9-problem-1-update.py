@@ -9,7 +9,6 @@ def generatePassword(passwordLength):
     possiblePasswordChars = string.ascii_letters + string.digits + '*/?-&'
     
     password = ''
-
     for i in range(passwordLength):
         randomNumber = randrange(0,len(possiblePasswordChars) -1)
         # get a single character from the string using hte randomNumber generated
@@ -27,17 +26,18 @@ def main():
     numPasswords = int(input('Number of passwords would you like to generate: '))
     # desired length of password
     pwLength = int(input('Desired password length: '))
-    
-    for i in range(numPasswords):
-        # Write code to ensure pwLength is between 8 and 42 inclusively
-        # your code here
-        # if password is between 8 and 42 then call the generatePassword() function
-        generatedPassword = generatePassword(pwLength)
 
-        # write password to a file
-        passwordFile.write(generatedPassword + '\n')
+    # Write code to ensure pwLength is between 8 and 42 inclusively
+    # your code here
+    # if password is between 8 and 42 then call the generatePassword() function
+    if pwLength >= 8 and pwLength <= 42:
+        for i in range(numPasswords):
+            generatedPassword = generatePassword(pwLength)
 
-    # close the file
-    passwordFile.close()
+            # write password to a file
+            passwordFile.write(generatedPassword + '\n')
+
+        # close the file
+        passwordFile.close()
 
 main()
